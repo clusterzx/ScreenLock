@@ -1,0 +1,2 @@
+# ScreenLock
+Locks your Desktop
