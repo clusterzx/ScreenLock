@@ -20,6 +20,6 @@ Unless you do that, the application won't lock the Taskmanager.
 
 Tip: 
 If you want it to run on logon with adminrights
-Open cmd --> schtasks /create /tn "NAME OF TASK" /tr PATH TO EXE /sc onstart /ru SYSTEM
+Open cmd --> schtasks /create /tn "NAME OF TASK" /tr PATH TO EXE /sc onstart /ru SYSTEM /RL HIGHEST
 
 ```
