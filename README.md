@@ -10,10 +10,10 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 # Change Password
 Go to Project Settings -> Settings -> Create a new string with name 'screenpw' and your password as value.
 
-## Compile it
+# Compile it
 Rebuild the solution
 
-### Windows configuration
+# Windows configuration
 Make the application run with Admin rights.
 Unless you do that, the application won't lock the Taskmanager.
 
