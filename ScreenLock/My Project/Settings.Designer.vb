@@ -53,30 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("abc123")>  _
-        Public Property screenpw() As String
-            Get
-                Return CType(Me("screenpw"),String)
-            End Get
-            Set
-                Me("screenpw") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("admin@bech0r.net")>  _
-        Public Property email() As String
-            Get
-                Return CType(Me("email"),String)
-            End Get
-            Set
-                Me("email") = value
-            End Set
-        End Property
     End Class
 End Namespace
 

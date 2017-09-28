@@ -79,7 +79,7 @@ Partial Class Locked
         Me.cmd_unlock.Customization = "AGQA/wD/AP+Q7pD/"
         Me.cmd_unlock.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.cmd_unlock.Image = Nothing
-        Me.cmd_unlock.Location = New System.Drawing.Point(138, 139)
+        Me.cmd_unlock.Location = New System.Drawing.Point(138, 161)
         Me.cmd_unlock.Name = "cmd_unlock"
         Me.cmd_unlock.NoRounding = False
         Me.cmd_unlock.Size = New System.Drawing.Size(223, 26)
@@ -90,15 +90,17 @@ Partial Class Locked
         'cmd_resetpw
         '
         Me.cmd_resetpw.Customization = "AGQA/wD/AP+Q7pD/"
+        Me.cmd_resetpw.Enabled = False
         Me.cmd_resetpw.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.cmd_resetpw.Image = Nothing
-        Me.cmd_resetpw.Location = New System.Drawing.Point(138, 170)
+        Me.cmd_resetpw.Location = New System.Drawing.Point(138, 192)
         Me.cmd_resetpw.Name = "cmd_resetpw"
         Me.cmd_resetpw.NoRounding = False
         Me.cmd_resetpw.Size = New System.Drawing.Size(223, 26)
         Me.cmd_resetpw.TabIndex = 11
         Me.cmd_resetpw.Text = "Reset Password"
         Me.cmd_resetpw.Transparent = False
+        Me.cmd_resetpw.Visible = False
         '
         'Textbox1
         '
@@ -107,7 +109,7 @@ Partial Class Locked
         Me.Textbox1.Customization = ""
         Me.Textbox1.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.Textbox1.Image = Nothing
-        Me.Textbox1.Location = New System.Drawing.Point(138, 111)
+        Me.Textbox1.Location = New System.Drawing.Point(138, 133)
         Me.Textbox1.MaxCharacters = 0
         Me.Textbox1.Name = "Textbox1"
         Me.Textbox1.NoRounding = False
@@ -120,7 +122,7 @@ Partial Class Locked
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.Lime
-        Me.Label1.Location = New System.Drawing.Point(176, 93)
+        Me.Label1.Location = New System.Drawing.Point(176, 115)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(147, 15)
         Me.Label1.TabIndex = 6
@@ -128,10 +130,10 @@ Partial Class Locked
         '
         'browser
         '
-        Me.browser.Location = New System.Drawing.Point(374, 197)
+        Me.browser.Location = New System.Drawing.Point(417, 209)
         Me.browser.MinimumSize = New System.Drawing.Size(20, 20)
         Me.browser.Name = "browser"
-        Me.browser.Size = New System.Drawing.Size(63, 32)
+        Me.browser.Size = New System.Drawing.Size(20, 20)
         Me.browser.TabIndex = 8
         Me.browser.Visible = False
         '
@@ -146,7 +148,7 @@ Partial Class Locked
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Locked"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ScreenLocker - v0.2"
+        Me.Text = "ScreenLock - v0.2"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ChTheme1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

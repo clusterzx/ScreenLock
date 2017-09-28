@@ -5,14 +5,6 @@ Imports System.ComponentModel, System.Windows.Forms
 Imports System.Runtime.InteropServices
 Imports System.Drawing.Imaging
 
-'------------------
-'Creator: aeonhack
-'Site: elitevs.net
-'Created: 08/02/2011
-'Changed: 12/06/2011
-'Version: 1.5.4
-'------------------
-
 MustInherit Class ThemeContainer154
     Inherits ContainerControl
 
@@ -2041,17 +2033,6 @@ Class PrecisionTimer
 End Class
 
 #End Region
-
-''' <summary>
-''' 1337Day.org Theme
-''' Creator: Carter (CH)
-''' Version: 1.0
-''' Date Created: 21/12/2013
-''' Date Changed: 21/12/2013
-''' Website: http://www.crazyhackers.pro/
-''' For any bugs / errors, message me.
-''' </summary>
-''' <remarks></remarks>
 
 Class CHTheme
     Inherits ThemeContainer154
