@@ -5,7 +5,10 @@ ScreenLock allows you to lock the screen against unauthorized use. Simply compil
 ### Instructions
 
 ```markdown
-# Change Password
+# Important
+## ReBuild it before opening form. It is necessary to make the Theme work.
+
+## Change Password
 Go to Project Settings -> Settings -> Create a new string with name 'screenpw' and your password as value.
 
 # Compile it
