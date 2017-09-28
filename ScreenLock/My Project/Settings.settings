@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="screenpw" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MySecuredPassword</Value>
+      <Value Profile="(Default)">abc123</Value>
     </Setting>
     <Setting Name="email" Type="System.String" Scope="User">
       <Value Profile="(Default)">admin@bech0r.net</Value>

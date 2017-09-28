@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("MySecuredPassword")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("abc123")>  _
         Public Property screenpw() As String
             Get
                 Return CType(Me("screenpw"),String)

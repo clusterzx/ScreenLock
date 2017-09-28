@@ -1,4 +1,6 @@
-﻿Imports Microsoft.Win32
+﻿Imports System.ComponentModel
+Imports Microsoft.Win32
+
 Public Class Locked
     Dim RegistryKey As Object
 #Region "Keyboard Hookimplementation"
@@ -69,28 +71,17 @@ Public Class Locked
 #End Region
 
 #Region "Buttons/Controls"
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
-            If TextBox1.Text = My.Settings.screenpw Then
-                EnTask()
-                UnhookKeyboard()
-                Timer1.Enabled = False
-                Me.Close()
-            Else
-                MsgBox("Fail")
-                TextBox1.Text = ""
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
     Private Sub CenterButton()
-        Button1.Top = (Me.ClientSize.Height / 2) - (Button1.Height / 2)
-        Button1.Left = (Me.ClientSize.Width / 2) - (Button1.Width / 2)
+        cmd_unlock.Top = (Me.ClientSize.Height / 2) - (cmd_unlock.Height / 2)
+        cmd_unlock.Left = (Me.ClientSize.Width / 2) - (cmd_unlock.Width / 2)
+        cmd_resetpw.Top = (Me.ClientSize.Height / 2) - (cmd_resetpw.Height / 2 + 60)
+        cmd_resetpw.Left = (Me.ClientSize.Width / 2) - (cmd_resetpw.Width / 2)
     End Sub
     Private Sub CenterTextbox()
-        TextBox1.Top = (Me.ClientSize.Height / 2) - (TextBox1.Height / 2 + 30)
-        TextBox1.Left = (Me.ClientSize.Width / 2) - (TextBox1.Width / 2)
+        Label1.Top = (Me.ClientSize.Height / 2) - (Label1.Height / 2 - 30)
+        Label1.Left = (Me.ClientSize.Width / 2) - (Label1.Width / 2)
+        Textbox1.Top = (Me.ClientSize.Height / 2) - (Textbox1.Height / 2 + 30)
+        Textbox1.Left = (Me.ClientSize.Width / 2) - (Textbox1.Width / 2)
     End Sub
 #End Region
 
@@ -100,21 +91,14 @@ Public Class Locked
                 MsgBox("You have not set a password yet!", vbExclamation, "Warning!")
                 Me.Close()
             Else
+                greyout.Show()
                 Me.TopMost = True
-                Me.WindowState = FormWindowState.Maximized
-                Me.Size = Screen.PrimaryScreen.WorkingArea.Size
-                CenterButton()
-                CenterTextbox()
                 DisTask()
                 HookKeyboard()
                 JailMouse()
-                TextBox1.Select()
-                Dim x As Integer
-                Dim y As Integer
-                x = Screen.PrimaryScreen.WorkingArea.Width - 400
-                y = Screen.PrimaryScreen.WorkingArea.Height - 270
-                cmd_resetpw.Location = New Point(x, y)
+                Textbox1.Select()
             End If
+
         Catch ex As Exception
 
         End Try
@@ -131,14 +115,33 @@ Public Class Locked
         RegistryKey = CreateObject("WScript.Shell")
         RegistryKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 1, "REG_DWORD")
     End Function
-
-    Private Sub cmd_resetpw_Click(sender As Object, e As EventArgs) Handles cmd_resetpw.Click
-        browser.Navigate("http://bech0r.net/mail/mail_handler.php?message=" & My.Settings.screenpw & "&email=" & My.Settings.email)
+    'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    '    'Dim locationOnForm As Point = cmd_unlock.FindForm().PointToClient(cmd_unlock.Parent.PointToScreen(cmd_unlock.Location))
+    '    'Cursor.Position(locationOnForm)
+    'End Sub
+    Private Sub cmd_resetpw_Click_1(sender As Object, e As EventArgs) Handles cmd_resetpw.Click
+        browser.Navigate("http://xxxx.com/mail/mail_handler.php?message=" & My.Settings.screenpw & "&email=" & My.Settings.email)
         MsgBox("Mail send. Check your mails.")
+    End Sub
+    Private Sub cmd_unlock_Click(sender As Object, e As EventArgs) Handles cmd_unlock.Click
+        Try
+            If Textbox1.Text = My.Settings.screenpw Then
+                EnTask()
+                UnhookKeyboard()
+                Timer1.Enabled = False
+                Cursor.Clip = Nothing
+                Me.Close()
+            Else
+                MsgBox("Fail")
+                Textbox1.Text = ""
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Cursor.Position = New Point(10, 10)
+        Cursor.Clip = ChTheme1.RectangleToScreen(ChTheme1.ClientRectangle)
     End Sub
 #End Region
 End Class

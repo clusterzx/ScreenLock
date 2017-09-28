@@ -46,6 +46,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>imageres_82.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="greyout.Designer.vb">
+      <DependentUpon>greyout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="greyout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Locked.Designer.vb">
       <DependentUpon>Locked.vb</DependentUpon>
     </Compile>
@@ -93,8 +102,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Theme.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="greyout.resx">
+      <DependentUpon>greyout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locked.resx">
       <DependentUpon>Locked.vb</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +131,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imageres_82.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
