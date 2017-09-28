@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## ScreenLock - Locks safely your Desktop
 
-You can use the [editor on GitHub](https://github.com/clusterzx/ScreenLock/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+ScreenLock allows you to lock the screen against unauthorized use. Simply compile the source code you have adapted to your needs.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+### Instructions
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
+# Change Password
+Go to Project Settings -> Settings -> Create a new string with name 'screenpw' and your password as value.
 
-# Header 1
-## Header 2
-### Header 3
+## Compile it
+Rebuild the solution
 
-- Bulleted
-- List
+### Windows configuration
+Make the application run with Admin rights.
+Unless you do that, the application won't lock the Taskmanager.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/clusterzx/ScreenLock/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
