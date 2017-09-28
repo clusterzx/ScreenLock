@@ -4,8 +4,6 @@ ScreenLock allows you to lock the screen against unauthorized use. Simply compil
 
 ### Instructions
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
 ```markdown
 # Change Password
 Go to Project Settings -> Settings -> Create a new string with name 'screenpw' and your password as value.
