@@ -1,17 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" UseMySettingsClassName="true">
   <Profiles />
-<<<<<<< HEAD
   <Settings />
 </SettingsFile>
-=======
-  <Settings>
-    <Setting Name="screenpw" Type="System.String" Scope="User">
-      <Value Profile="(Default)">abc123</Value>
-    </Setting>
-    <Setting Name="email" Type="System.String" Scope="User">
-      <Value Profile="(Default)">admin@xxxxx.net</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>
->>>>>>> 5b3090ab801da6083e92aa7cbf7409e47b79b944
