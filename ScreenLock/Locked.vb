@@ -153,8 +153,8 @@ Public Class Locked
             Dim path As String = IO.Directory.GetCurrentDirectory & "\settings\config.cfg"
             If IO.File.Exists(path) Then
                 lines = IO.File.ReadAllLines(path)
-                password = FromBase64(lines(1).Split("=")(1))
-                recoveryEmail = lines(2).Split("=")(1)
+                password = FromBase64(lines(1).Split(";")(1))
+                recoveryEmail = lines(2).Split(";")(1)
             End If
         Catch ex As Exception
             MsgBox("Error loading configuration file")
@@ -171,8 +171,8 @@ Public Class Locked
                 Dim file As System.IO.StreamWriter
                 file = My.Computer.FileSystem.OpenTextFileWriter(fi, True)
                 file.WriteLine("[ScreenLocker Configfile]")
-                file.WriteLine("password=" & ToBase64(password))
-                file.WriteLine("recoveryEmail=" & recoveryEmail)
+                file.WriteLine("password;" & ToBase64(password))
+                file.WriteLine("recoveryEmail;" & recoveryEmail)
                 file.WriteLine("[__________END__________]")
                 file.Close()
             End If
